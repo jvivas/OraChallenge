@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		272F63535FD0837AC8A152F3 /* Pods_OraChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */; };
+		72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141F811E69EBB300E60CBE /* AppDelegate.swift */; };
+		72141F841E69EBB300E60CBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141F831E69EBB300E60CBE /* ViewController.swift */; };
+		72141F871E69EBB300E60CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72141F851E69EBB300E60CBE /* Main.storyboard */; };
+		72141F891E69EBB300E60CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72141F881E69EBB300E60CBE /* Assets.xcassets */; };
+		72141F8C1E69EBB300E60CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72141F8A1E69EBB300E60CBE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20C34E2A3C630388276BF0E9 /* Pods-OraChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		72141F7E1E69EBB300E60CBE /* OraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72141F811E69EBB300E60CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72141F831E69EBB300E60CBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72141F861E69EBB300E60CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72141F881E69EBB300E60CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72141F8B1E69EBB300E60CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		72141F8D1E69EBB300E60CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OraChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88FC8443A9915766682A458 /* Pods-OraChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72141F7B1E69EBB300E60CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272F63535FD0837AC8A152F3 /* Pods_OraChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B00C2997E99B4D002793B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E6EEB9495AB12D0459ED379 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E88FC8443A9915766682A458 /* Pods-OraChallenge.debug.xcconfig */,
+				20C34E2A3C630388276BF0E9 /* Pods-OraChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72141F751E69EBB300E60CBE = {
+			isa = PBXGroup;
+			children = (
+				72141F801E69EBB300E60CBE /* OraChallenge */,
+				72141F7F1E69EBB300E60CBE /* Products */,
+				4E6EEB9495AB12D0459ED379 /* Pods */,
+				13B00C2997E99B4D002793B8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		72141F7F1E69EBB300E60CBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72141F7E1E69EBB300E60CBE /* OraChallenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72141F801E69EBB300E60CBE /* OraChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				72141F811E69EBB300E60CBE /* AppDelegate.swift */,
+				72141F831E69EBB300E60CBE /* ViewController.swift */,
+				72141F851E69EBB300E60CBE /* Main.storyboard */,
+				72141F881E69EBB300E60CBE /* Assets.xcassets */,
+				72141F8A1E69EBB300E60CBE /* LaunchScreen.storyboard */,
+				72141F8D1E69EBB300E60CBE /* Info.plist */,
+			);
+			path = OraChallenge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72141F7D1E69EBB300E60CBE /* OraChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72141F901E69EBB300E60CBE /* Build configuration list for PBXNativeTarget "OraChallenge" */;
+			buildPhases = (
+				0AE6DF8E0BE5E974050E0653 /* [CP] Check Pods Manifest.lock */,
+				72141F7A1E69EBB300E60CBE /* Sources */,
+				72141F7B1E69EBB300E60CBE /* Frameworks */,
+				72141F7C1E69EBB300E60CBE /* Resources */,
+				2A3936A20D79DE68D943C542 /* [CP] Embed Pods Frameworks */,
+				D08C25DD190C704D2DE39DAD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OraChallenge;
+			productName = OraChallenge;
+			productReference = 72141F7E1E69EBB300E60CBE /* OraChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72141F761E69EBB300E60CBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = JorgeVivas;
+				TargetAttributes = {
+					72141F7D1E69EBB300E60CBE = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3CGA9K6XXR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 72141F791E69EBB300E60CBE /* Build configuration list for PBXProject "OraChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72141F751E69EBB300E60CBE;
+			productRefGroup = 72141F7F1E69EBB300E60CBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72141F7D1E69EBB300E60CBE /* OraChallenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72141F7C1E69EBB300E60CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72141F8C1E69EBB300E60CBE /* LaunchScreen.storyboard in Resources */,
+				72141F891E69EBB300E60CBE /* Assets.xcassets in Resources */,
+				72141F871E69EBB300E60CBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AE6DF8E0BE5E974050E0653 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2A3936A20D79DE68D943C542 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08C25DD190C704D2DE39DAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72141F7A1E69EBB300E60CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72141F841E69EBB300E60CBE /* ViewController.swift in Sources */,
+				72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72141F851E69EBB300E60CBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72141F861E69EBB300E60CBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72141F8A1E69EBB300E60CBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72141F8B1E69EBB300E60CBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72141F8E1E69EBB300E60CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72141F8F1E69EBB300E60CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72141F911E69EBB300E60CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88FC8443A9915766682A458 /* Pods-OraChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CGA9K6XXR;
+				INFOPLIST_FILE = OraChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orainteractive.OraChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		72141F921E69EBB300E60CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C34E2A3C630388276BF0E9 /* Pods-OraChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CGA9K6XXR;
+				INFOPLIST_FILE = OraChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orainteractive.OraChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72141F791E69EBB300E60CBE /* Build configuration list for PBXProject "OraChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72141F8E1E69EBB300E60CBE /* Debug */,
+				72141F8F1E69EBB300E60CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72141F901E69EBB300E60CBE /* Build configuration list for PBXNativeTarget "OraChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72141F911E69EBB300E60CBE /* Debug */,
+				72141F921E69EBB300E60CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72141F761E69EBB300E60CBE /* Project object */;
+}
