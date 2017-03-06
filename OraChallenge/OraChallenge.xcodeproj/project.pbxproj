@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		272F63535FD0837AC8A152F3 /* Pods_OraChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */; };
 		72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141F811E69EBB300E60CBE /* AppDelegate.swift */; };
-		72141F841E69EBB300E60CBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141F831E69EBB300E60CBE /* ViewController.swift */; };
 		72141F871E69EBB300E60CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72141F851E69EBB300E60CBE /* Main.storyboard */; };
 		72141F891E69EBB300E60CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72141F881E69EBB300E60CBE /* Assets.xcassets */; };
 		72141F8C1E69EBB300E60CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72141F8A1E69EBB300E60CBE /* LaunchScreen.storyboard */; };
+		727509281E6A8CFF0071C35A /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727509271E6A8CFF0071C35A /* LoginTableViewController.swift */; };
+		7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727509291E6A8DA20071C35A /* BaseTableViewController.swift */; };
+		7275092C1E6A91F10071C35A /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275092B1E6A91F10071C35A /* RegisterTableViewController.swift */; };
+		7275092E1E6A9BBA0071C35A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275092D1E6A9BBA0071C35A /* APIManager.swift */; };
+		728C09D51E6B10E7008E5D3C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09D41E6B10E7008E5D3C /* AuthManager.swift */; };
+		728C09D71E6B18AF008E5D3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09D61E6B18AF008E5D3C /* User.swift */; };
+		728C09DB1E6CEA9E008E5D3C /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09DA1E6CEA9E008E5D3C /* DefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20C34E2A3C630388276BF0E9 /* Pods-OraChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		72141F7E1E69EBB300E60CBE /* OraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72141F811E69EBB300E60CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72141F831E69EBB300E60CBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72141F861E69EBB300E60CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72141F881E69EBB300E60CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72141F8B1E69EBB300E60CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72141F8D1E69EBB300E60CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		727509271E6A8CFF0071C35A /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = ViewControllers/LoginTableViewController.swift; sourceTree = "<group>"; };
+		727509291E6A8DA20071C35A /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = ViewControllers/BaseTableViewController.swift; sourceTree = "<group>"; };
+		7275092B1E6A91F10071C35A /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterTableViewController.swift; path = ViewControllers/RegisterTableViewController.swift; sourceTree = "<group>"; };
+		7275092D1E6A9BBA0071C35A /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = API/APIManager.swift; sourceTree = "<group>"; };
+		728C09D41E6B10E7008E5D3C /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = API/AuthManager.swift; sourceTree = "<group>"; };
+		728C09D61E6B18AF008E5D3C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		728C09DA1E6CEA9E008E5D3C /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultsManager.swift; path = Utils/DefaultsManager.swift; sourceTree = "<group>"; };
 		BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OraChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88FC8443A9915766682A458 /* Pods-OraChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,13 +91,51 @@
 			isa = PBXGroup;
 			children = (
 				72141F811E69EBB300E60CBE /* AppDelegate.swift */,
-				72141F831E69EBB300E60CBE /* ViewController.swift */,
+				724643DC1E6A8455005CB2C0 /* API */,
+				724643DB1E6A8429005CB2C0 /* Model */,
+				724643DA1E6A841C005CB2C0 /* ViewControllers */,
+				728C09D91E6CEA71008E5D3C /* Utils */,
 				72141F851E69EBB300E60CBE /* Main.storyboard */,
 				72141F881E69EBB300E60CBE /* Assets.xcassets */,
 				72141F8A1E69EBB300E60CBE /* LaunchScreen.storyboard */,
 				72141F8D1E69EBB300E60CBE /* Info.plist */,
 			);
 			path = OraChallenge;
+			sourceTree = "<group>";
+		};
+		724643DA1E6A841C005CB2C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				727509291E6A8DA20071C35A /* BaseTableViewController.swift */,
+				727509271E6A8CFF0071C35A /* LoginTableViewController.swift */,
+				7275092B1E6A91F10071C35A /* RegisterTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		724643DB1E6A8429005CB2C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				728C09D61E6B18AF008E5D3C /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		724643DC1E6A8455005CB2C0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7275092D1E6A9BBA0071C35A /* APIManager.swift */,
+				728C09D41E6B10E7008E5D3C /* AuthManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		728C09D91E6CEA71008E5D3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				728C09DA1E6CEA9E008E5D3C /* DefaultsManager.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72141F841E69EBB300E60CBE /* ViewController.swift in Sources */,
+				7275092C1E6A91F10071C35A /* RegisterTableViewController.swift in Sources */,
+				728C09D51E6B10E7008E5D3C /* AuthManager.swift in Sources */,
+				727509281E6A8CFF0071C35A /* LoginTableViewController.swift in Sources */,
+				728C09DB1E6CEA9E008E5D3C /* DefaultsManager.swift in Sources */,
+				7275092E1E6A9BBA0071C35A /* APIManager.swift in Sources */,
+				7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */,
 				72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */,
+				728C09D71E6B18AF008E5D3C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

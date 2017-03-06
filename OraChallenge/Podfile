@@ -4,4 +4,6 @@ use_frameworks!
 target ‘OraChallenge’ do
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SwiftMessages'
+  pod 'EGGProgressHUD'
 end
