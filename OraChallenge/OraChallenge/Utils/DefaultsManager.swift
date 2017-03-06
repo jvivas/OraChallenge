@@ -16,7 +16,7 @@ class DefaultsManager: NSObject {
         UserDefaults.standard.setValue(token, forKey: key_token)
     }
     
-    static func getAuthToken() -> String {
-        return UserDefaults.standard.value(forKey: key_token) as! String
+    static func getAuthToken() -> String? {
+        return UserDefaults.standard.value(forKey: key_token) as? String
     }
 }

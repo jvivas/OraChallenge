@@ -25,7 +25,9 @@ class BaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView(frame: .zero)
         customHud()
+        hideKeyboardWhenTappedAround() 
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,22 +45,34 @@ class BaseTableViewController: UITableViewController {
         return 0
     }
     
-    func isValidText(text:String) -> Bool {
+    func isValidText(text: String) -> Bool {
         if text.characters.count == 0 {
             return false
         }
         return true
     }
     
-    func showErrorMessage(message:String) {
+    func showErrorMessage(message: String) {
         let view = MessageView.viewFromNib(layout: .TabView)
         view.configureTheme(.error)
         view.button?.isHidden = true
+        view.configureContent(title: "Error", body: message)
+        SwiftMessages.show(config: getMessageConfig(), view: view)
+    }
+    
+    func showSuccessMessage(message: String) {
+        let view = MessageView.viewFromNib(layout: .TabView)
+        view.configureTheme(.success)
+        view.button?.isHidden = true
+        view.configureContent(title: "Success", body: message)
+        SwiftMessages.show(config: getMessageConfig(), view: view)
+    }
+    
+    func getMessageConfig () -> SwiftMessages.Config {
         var config = SwiftMessages.defaultConfig
         config.presentationStyle = .bottom
         config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
-        view.configureContent(title: "Error", body: message)
-        SwiftMessages.show(config: config, view: view)
+        return config
     }
     
     func customHud() {
@@ -73,5 +87,17 @@ class BaseTableViewController: UITableViewController {
     
     func stopLoader() {
         progressHud.hide()
+    }
+}
+
+extension UITableViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UITableViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

@@ -14,8 +14,16 @@ import SwiftyJSON
 class APIManager: NSObject {
     let baseUrl = "https://private-93240c-oracodechallenge.apiary-mock.com/"
     
-    func request(path:String, method: HTTPMethod, parameters: Parameters, onSuccess:@escaping ((SwiftyJSON.JSON) -> Void), onFailed:@escaping ((String, Int) -> Void)) {
-        Alamofire.request(baseUrl+path, method: method, parameters:parameters, encoding: JSONEncoding.default)
+    func request(path:String, method: HTTPMethod, parameters: Parameters?, onSuccess:@escaping ((SwiftyJSON.JSON) -> Void), onFailed:@escaping ((String, Int) -> Void)) {
+        
+        var headers: [String:String] = [
+            "Content-Type": "application/json; charset=UTF-8"
+        ]
+        if let authToken = DefaultsManager.getAuthToken() {
+            headers["Authorization"] = authToken
+        }
+        
+        Alamofire.request(baseUrl+path, method: method, parameters:parameters, encoding: JSONEncoding.default, headers: headers)
             .validate()
             .responseJSON { response in
                 switch response.result {

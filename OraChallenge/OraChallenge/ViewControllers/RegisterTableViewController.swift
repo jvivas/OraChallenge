@@ -20,7 +20,6 @@ class RegisterTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView(frame: .zero)
         usersManager = UsersManager.init()
         usersManager?.delegate = self
     }
