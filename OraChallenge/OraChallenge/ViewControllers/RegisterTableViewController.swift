@@ -10,9 +10,19 @@ import UIKit
 
 class RegisterTableViewController: BaseTableViewController {
 
+    
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldConfirmPassword: UITextField!
+    
+    var usersManager: UsersManager? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: .zero)
+        usersManager = UsersManager.init()
+        usersManager?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,12 +32,10 @@ class RegisterTableViewController: BaseTableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 4
     }
 
@@ -38,12 +46,50 @@ class RegisterTableViewController: BaseTableViewController {
     }
     
     @IBAction func onTapLoginButton(_ sender: Any) {
-//        navigationController?.pop(animated: true)
         _ = navigationController?.popViewController(animated: true)
     }
     
 
     @IBAction func onTapRegisterButton(_ sender: Any) {
+        if isValidData() {
+            startLoader(message: "Loading...")
+            usersManager?.requestCreate(name: textFieldName.text!, email: textFieldEmail.text!, password: textFieldPassword.text!, passwordConfirmation: textFieldConfirmPassword.text!)
+        }
     }
     
+    func isValidData() -> Bool {
+        if !isValidText(text: textFieldName.text!) {
+            showErrorMessage(message: "Please enter a name")
+            return false
+        }
+        if !isValidText(text: textFieldEmail.text!) || !(textFieldEmail.text?.isValidEmail())! {
+            showErrorMessage(message: "Please enter a valid email")
+            return false
+        }
+        if !isValidText(text: textFieldPassword.text!) {
+            showErrorMessage(message: "Please enter a password")
+            return false
+        }
+        if !isValidText(text: textFieldConfirmPassword.text!) {
+            showErrorMessage(message: "Please confirm your password")
+            return false
+        }
+        if textFieldPassword.text! != textFieldConfirmPassword.text! {
+            showErrorMessage(message: "Please enter the same password")
+            return false
+        }
+        return true
+    }
+}
+
+extension RegisterTableViewController : UsersDelegate {
+    func onCreateUserResponse(user:User?, errorMessage:String?) {
+        stopLoader()
+        if errorMessage != nil {
+            showErrorMessage(message: errorMessage!)
+        } else {
+            // TODO show next screen
+            print("Success created user")
+        }
+    }
 }

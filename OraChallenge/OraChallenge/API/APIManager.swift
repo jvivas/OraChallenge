@@ -10,9 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-enum BackendError: Error {
-    case objectSerialization(reason: String)
-}
 
 class APIManager: NSObject {
     let baseUrl = "https://private-93240c-oracodechallenge.apiary-mock.com/"

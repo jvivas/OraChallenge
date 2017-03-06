@@ -19,6 +19,7 @@
 		728C09D51E6B10E7008E5D3C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09D41E6B10E7008E5D3C /* AuthManager.swift */; };
 		728C09D71E6B18AF008E5D3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09D61E6B18AF008E5D3C /* User.swift */; };
 		728C09DB1E6CEA9E008E5D3C /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09DA1E6CEA9E008E5D3C /* DefaultsManager.swift */; };
+		728C09DD1E6D19FC008E5D3C /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C09DC1E6D19FC008E5D3C /* UsersManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		728C09D41E6B10E7008E5D3C /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = API/AuthManager.swift; sourceTree = "<group>"; };
 		728C09D61E6B18AF008E5D3C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		728C09DA1E6CEA9E008E5D3C /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultsManager.swift; path = Utils/DefaultsManager.swift; sourceTree = "<group>"; };
+		728C09DC1E6D19FC008E5D3C /* UsersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersManager.swift; path = API/UsersManager.swift; sourceTree = "<group>"; };
 		BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OraChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88FC8443A9915766682A458 /* Pods-OraChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			children = (
 				7275092D1E6A9BBA0071C35A /* APIManager.swift */,
 				728C09D41E6B10E7008E5D3C /* AuthManager.swift */,
+				728C09DC1E6D19FC008E5D3C /* UsersManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				728C09DB1E6CEA9E008E5D3C /* DefaultsManager.swift in Sources */,
 				7275092E1E6A9BBA0071C35A /* APIManager.swift in Sources */,
 				7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */,
+				728C09DD1E6D19FC008E5D3C /* UsersManager.swift in Sources */,
 				72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */,
 				728C09D71E6B18AF008E5D3C /* User.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ import SwiftyJSON
 }
 
 class AuthManager: APIManager {
-    let pathLogin = "auth/login2"
+    let pathLogin = "auth/login"
     var delegate:AuthDelegate?
     
     func requestLogin(email:String, password:String) {

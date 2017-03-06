@@ -13,11 +13,13 @@ class LoginTableViewController: BaseTableViewController {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
-    var authManager:AuthManager? = nil
+    var authManager: AuthManager? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: .zero)
+        authManager = AuthManager.init()
+        authManager?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,9 +38,7 @@ class LoginTableViewController: BaseTableViewController {
     
     @IBAction func onTapLogin(_ sender: Any) {
         if isValidData() {
-            startLoader(message: "Loading")
-            authManager = AuthManager.init()
-            authManager?.delegate = self
+            startLoader(message: "Loading...")
             authManager!.requestLogin(email: textFieldEmail.text!, password: textFieldPassword.text!)
         }
     }
