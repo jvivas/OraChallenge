@@ -317,7 +317,6 @@
         <!--Chat Detail Table View Controller-->
         <scene sceneID="X2k-fY-7F2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1aD-EO-oPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="HEm-hx-so7" customClass="ChatDetailTableViewController" customModule="OraChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Di-Cv-dbl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -413,6 +412,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aD-EO-oPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6384" y="-136"/>
         </scene>
@@ -530,7 +530,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNv-Aa-nlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6510" y="510"/>
+            <point key="canvasLocation" x="6495" y="509"/>
+        </scene>
+        <!--Create Chat View Controller-->
+        <scene sceneID="Ws8-Zz-eCE">
+            <objects>
+                <viewController storyboardIdentifier="createChatViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lhz-mo-UDr" customClass="CreateChatViewController" customModule="OraChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JXA-fc-aFl"/>
+                        <viewControllerLayoutGuide type="bottom" id="6sg-eC-gnk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xX5-5k-fpl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3r-xR-kQD">
+                                <rect key="frame" x="40" y="39" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDi-bm-2LE">
+                                <rect key="frame" x="40" y="89" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wY-c3-0oc">
+                                <rect key="frame" x="40" y="142" width="240" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.64705882349999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapCreateChat:" destination="lhz-mo-UDr" eventType="touchUpInside" id="DQo-JJ-s1W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VDi-bm-2LE" firstAttribute="leading" secondItem="R3r-xR-kQD" secondAttribute="leading" id="48h-yA-Ma6"/>
+                            <constraint firstItem="VDi-bm-2LE" firstAttribute="top" secondItem="R3r-xR-kQD" secondAttribute="bottom" constant="20" id="6TB-qv-Cks"/>
+                            <constraint firstItem="R3r-xR-kQD" firstAttribute="top" secondItem="JXA-fc-aFl" secondAttribute="bottom" constant="19" id="8CB-t1-EWz"/>
+                            <constraint firstItem="R3r-xR-kQD" firstAttribute="leading" secondItem="xX5-5k-fpl" secondAttribute="leadingMargin" constant="24" id="D6x-Jx-jeK"/>
+                            <constraint firstItem="VDi-bm-2LE" firstAttribute="trailing" secondItem="R3r-xR-kQD" secondAttribute="trailing" id="LBz-MB-xO3"/>
+                            <constraint firstItem="9wY-c3-0oc" firstAttribute="centerX" secondItem="xX5-5k-fpl" secondAttribute="centerX" id="P0I-n6-zbi"/>
+                            <constraint firstItem="9wY-c3-0oc" firstAttribute="trailing" secondItem="VDi-bm-2LE" secondAttribute="trailing" id="Piv-Yh-EYb"/>
+                            <constraint firstItem="VDi-bm-2LE" firstAttribute="centerX" secondItem="xX5-5k-fpl" secondAttribute="centerX" id="aqD-fL-IQo"/>
+                            <constraint firstItem="R3r-xR-kQD" firstAttribute="centerX" secondItem="xX5-5k-fpl" secondAttribute="centerX" id="cvq-9V-gAD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R3r-xR-kQD" secondAttribute="trailing" constant="24" id="h3I-Qn-qLz"/>
+                            <constraint firstItem="9wY-c3-0oc" firstAttribute="leading" secondItem="VDi-bm-2LE" secondAttribute="leading" id="yna-F4-eVa"/>
+                            <constraint firstItem="9wY-c3-0oc" firstAttribute="top" secondItem="VDi-bm-2LE" secondAttribute="bottom" constant="23" id="zO9-7F-JIB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldMessage" destination="VDi-bm-2LE" id="85N-NH-Ccj"/>
+                        <outlet property="textFieldName" destination="R3r-xR-kQD" id="rS6-Sn-yd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwm-S4-4L9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7194" y="510"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Wu-aB-bor">

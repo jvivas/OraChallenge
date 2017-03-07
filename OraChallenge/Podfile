@@ -7,5 +7,5 @@ target ‘OraChallenge’ do
   pod 'SwiftMessages'
   pod 'EGGProgressHUD'
   pod 'DTZFloatingActionButton'
-  #pod 'DCCommentView'
+  pod 'STPopup'
 end

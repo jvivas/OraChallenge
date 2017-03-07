@@ -26,12 +26,10 @@ class ChatsManager: APIManager {
     func requestGetChats(page: Int, limit: Int) {
         let url = "\(pathChats)?page=\(page)&limit=\(limit)"
         request(path: url, method: .get, parameters: nil, onSuccess: { (response: SwiftyJSON.JSON) in
-            print("Response: \(response)")
             var chats = [Chat]()
             if let items = response["data"].array {
                 for item in items {
                     if let chat = Chat(json: item) {
-                        print("Chat message \(chat)")
                         chats.append(chat)
                     }
                 }
@@ -48,12 +46,10 @@ class ChatsManager: APIManager {
     func requestGetChatMessages(id:Int, page:Int, limit:Int) {
         let url = "\(pathChats)/\(id)/chat_messages?page=\(page)&limit=\(limit)"
         request(path: url, method: .get, parameters: nil, onSuccess: { (response: SwiftyJSON.JSON) in
-            print("Response: \(response)")
             var chatMessages = [ChatMessage]()
             if let items = response["data"].array {
                 for item in items {
                     if let chatMessage = ChatMessage(json: item) {
-                        print("Chat message \(chatMessage)")
                         chatMessages.append(chatMessage)
                     }
                 }
@@ -70,7 +66,6 @@ class ChatsManager: APIManager {
         let parameters: Parameters = [ "message": message]
         let url = "\(pathChats)/\(chatId)/chat_messages"
         request(path: url, method: .post, parameters: parameters, onSuccess: { (response: SwiftyJSON.JSON) in
-            print("Response: \(response)")
             let chatMessage = ChatMessage(json: response["data"])
             self.delegate?.onCreateChatMessage!(chatMessage: chatMessage, errorMessage: nil)
         }, onFailed: { (response: String, statusCode:Int) in
@@ -81,7 +76,6 @@ class ChatsManager: APIManager {
     func requestCreateChat(name:String, message:String) {
         let parameters: Parameters = ["name" : name, "message": message]
         request(path: pathChats, method: .post, parameters: parameters, onSuccess: { (response: SwiftyJSON.JSON) in
-            print("Response: \(response)")
             let chat = Chat(json: response["data"])
             self.delegate?.onCreateChat!(chat: chat, errorMessage: nil)
         }, onFailed: { (response: String, statusCode:Int) in

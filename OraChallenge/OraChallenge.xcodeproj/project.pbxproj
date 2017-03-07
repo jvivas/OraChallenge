@@ -24,6 +24,7 @@
 		721AED961E6E5CA700C4422F /* DCCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 721AED951E6E5CA700C4422F /* DCCommentView.m */; };
 		721AED981E6E6EE100C4422F /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AED971E6E6EE100C4422F /* ChatDetailViewController.swift */; };
 		721AED9A1E6E707000C4422F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AED991E6E707000C4422F /* BaseViewController.swift */; };
+		721AED9C1E6E7F1D00C4422F /* CreateChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721AED9B1E6E7F1D00C4422F /* CreateChatViewController.swift */; };
 		727509281E6A8CFF0071C35A /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727509271E6A8CFF0071C35A /* LoginTableViewController.swift */; };
 		7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727509291E6A8DA20071C35A /* BaseTableViewController.swift */; };
 		7275092C1E6A91F10071C35A /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275092B1E6A91F10071C35A /* RegisterTableViewController.swift */; };
@@ -58,6 +59,7 @@
 		721AED951E6E5CA700C4422F /* DCCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCommentView.m; sourceTree = "<group>"; };
 		721AED971E6E6EE100C4422F /* ChatDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatDetailViewController.swift; path = ViewControllers/ChatDetailViewController.swift; sourceTree = "<group>"; };
 		721AED991E6E707000C4422F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
+		721AED9B1E6E7F1D00C4422F /* CreateChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateChatViewController.swift; path = ViewControllers/CreateChatViewController.swift; sourceTree = "<group>"; };
 		727509271E6A8CFF0071C35A /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = ViewControllers/LoginTableViewController.swift; sourceTree = "<group>"; };
 		727509291E6A8DA20071C35A /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = ViewControllers/BaseTableViewController.swift; sourceTree = "<group>"; };
 		7275092B1E6A91F10071C35A /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterTableViewController.swift; path = ViewControllers/RegisterTableViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				728C09E01E6D302C008E5D3C /* AccountTableViewController.swift */,
 				728C09DE1E6D20C7008E5D3C /* ChatsTableViewController.swift */,
 				721AED971E6E6EE100C4422F /* ChatDetailViewController.swift */,
+				721AED9B1E6E7F1D00C4422F /* CreateChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				72043E6E1E6D4BD500F5CE88 /* ChatTableViewCell.swift in Sources */,
 				7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */,
 				728C09DD1E6D19FC008E5D3C /* UsersManager.swift in Sources */,
+				721AED9C1E6E7F1D00C4422F /* CreateChatViewController.swift in Sources */,
 				720C08651E6E445E0074D0F5 /* ChatMessagesList.swift in Sources */,
 				72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */,
 				728C09D71E6B18AF008E5D3C /* User.swift in Sources */,

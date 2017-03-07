@@ -25,6 +25,13 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func isValidText(text:String) -> Bool {
+        if text.characters.count == 0 {
+            return false
+        }
+        return true
+    }
+    
     func showErrorMessage(message: String) {
         let view = MessageView.viewFromNib(layout: .TabView)
         view.configureTheme(.error)

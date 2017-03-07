@@ -36,13 +36,13 @@ class BaseTableViewController: UITableViewController {
         return 0
     }
     
-    func isValidText(text: String) -> Bool {
+    func isValidText(text:String) -> Bool {
         if text.characters.count == 0 {
             return false
         }
         return true
     }
-    
+
     func showErrorMessage(message: String) {
         let view = MessageView.viewFromNib(layout: .TabView)
         view.configureTheme(.error)

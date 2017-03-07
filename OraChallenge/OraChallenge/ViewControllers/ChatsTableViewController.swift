@@ -8,11 +8,13 @@
 
 import UIKit
 import DTZFloatingActionButton
+import STPopup
 
 class ChatsTableViewController: BaseTableViewController {
 
-    var chatsManager: ChatsManager? = nil
+    var chatsManager : ChatsManager? = nil
     var arrayAllChats : ChatList?
+    var selectedChat : Chat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,11 @@ class ChatsTableViewController: BaseTableViewController {
         buttonAddChat.buttonColor = UIColor.orange
         buttonAddChat.handler = {
             button in
-            self.performSegue(withIdentifier: "segueShowChatDetail", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController : CreateChatViewController = storyboard.instantiateViewController(withIdentifier: "createChatViewControllerId") as! CreateChatViewController
+            viewController.delegate = self
+            let popupController : STPopupController = STPopupController.init(rootViewController: viewController)
+            popupController.present(in: self)
         }
         buttonAddChat.isScrollView = true
         self.view.addSubview(buttonAddChat)
@@ -72,19 +78,18 @@ class ChatsTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatByIndex:Chat = (self.arrayAllChats?.chats![indexPath.row])!
+        selectedChat = chatByIndex
         self.performSegue(withIdentifier: "segueShowChatDetail", sender: self)
     }
     
     //     MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueShowChatDetail" ,
-            let nextScene:ChatDetailViewController = segue.destination as? ChatDetailViewController ,
-            let indexPath = self.tableView.indexPathForSelectedRow {
-            let selectedChat:Chat = (self.arrayAllChats?.chats![indexPath.row])!
+        if segue.identifier == "segueShowChatDetail" {
+            let nextScene:ChatDetailViewController = (segue.destination as? ChatDetailViewController)!
             nextScene.currentChatDetail = selectedChat
         }
     }
-
 }
 
 extension ChatsTableViewController :  ChatsDelegate {
@@ -93,8 +98,27 @@ extension ChatsTableViewController :  ChatsDelegate {
         if errorMessage != nil {
             showErrorMessage(message: errorMessage!)
         } else {
-            self.arrayAllChats = chatList
-            self.tableView.reloadData()
+            arrayAllChats = chatList
+            tableView.reloadData()
         }
+    }
+    
+    func onCreateChat(chat: Chat?, errorMessage: String?) {
+        stopLoader()
+        if errorMessage != nil {
+            showErrorMessage(message: errorMessage!)
+        } else {
+            arrayAllChats?.chats?.append(chat!)
+            selectedChat = chat
+            self.performSegue(withIdentifier: "segueShowChatDetail", sender: self)
+            tableView.reloadData()
+        }
+    }
+}
+
+extension ChatsTableViewController: CreateChatPopupDelegate {
+    func onCreateChat(name: String, message: String) {
+        startLoader(message: "Loading...")
+        chatsManager?.requestCreateChat(name: name, message: message)
     }
 }

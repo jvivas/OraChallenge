@@ -53,6 +53,7 @@ class ChatDetailViewController: BaseViewController {
         self.view.addSubview(commentView!)
         commentView?.tintColor = UIColor.black
     }
+
 }
 
 extension ChatDetailViewController : UITableViewDelegate, UITableViewDataSource {

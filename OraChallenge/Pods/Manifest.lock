@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - DTZFloatingActionButton (0.2.0)
   - EGGProgressHUD (0.4.0)
+  - STPopup (1.8.2)
   - SwiftMessages (3.1.5)
   - SwiftyJSON (3.1.4)
 
@@ -9,6 +10,7 @@ DEPENDENCIES:
   - Alamofire
   - DTZFloatingActionButton
   - EGGProgressHUD
+  - STPopup
   - SwiftMessages
   - SwiftyJSON
 
@@ -16,9 +18,10 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   DTZFloatingActionButton: 9dc86d3e566c2c601d82e9c86003289dc8b7559b
   EGGProgressHUD: 504a2e1e6bf3bd57fdcf535be5196573f1bdf596
+  STPopup: b69b3e7484ef7d2baec5f9ab2939f8a7bcdfe218
   SwiftMessages: bb85d7c30e85256f9367214b0907e1f409e1870a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: bbd1d24832122b218653bf9737a377e594c14743
+PODFILE CHECKSUM: 700164e6bdfc3175d1b44c17f29f0c8a2a7d75a2
 
 COCOAPODS: 1.1.1
