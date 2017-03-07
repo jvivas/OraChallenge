@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		272F63535FD0837AC8A152F3 /* Pods_OraChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB02B88523A2D66A86E930D5 /* Pods_OraChallenge.framework */; };
+		72043E631E6D3F9200F5CE88 /* ChatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E621E6D3F9200F5CE88 /* ChatsManager.swift */; };
+		72043E651E6D424700F5CE88 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E641E6D424700F5CE88 /* ChatMessage.swift */; };
+		72043E671E6D466900F5CE88 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E661E6D466800F5CE88 /* Chat.swift */; };
+		72043E691E6D481300F5CE88 /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E681E6D481300F5CE88 /* ChatList.swift */; };
+		72043E6B1E6D486E00F5CE88 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E6A1E6D486E00F5CE88 /* Pagination.swift */; };
+		72043E6E1E6D4BD500F5CE88 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72043E6D1E6D4BD500F5CE88 /* ChatTableViewCell.swift */; };
 		72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141F811E69EBB300E60CBE /* AppDelegate.swift */; };
 		72141F871E69EBB300E60CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72141F851E69EBB300E60CBE /* Main.storyboard */; };
 		72141F891E69EBB300E60CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72141F881E69EBB300E60CBE /* Assets.xcassets */; };
@@ -26,6 +32,12 @@
 
 /* Begin PBXFileReference section */
 		20C34E2A3C630388276BF0E9 /* Pods-OraChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraChallenge/Pods-OraChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		72043E621E6D3F9200F5CE88 /* ChatsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatsManager.swift; path = API/ChatsManager.swift; sourceTree = "<group>"; };
+		72043E641E6D424700F5CE88 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatMessage.swift; path = Model/ChatMessage.swift; sourceTree = "<group>"; };
+		72043E661E6D466800F5CE88 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Model/Chat.swift; sourceTree = "<group>"; };
+		72043E681E6D481300F5CE88 /* ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatList.swift; path = Model/ChatList.swift; sourceTree = "<group>"; };
+		72043E6A1E6D486E00F5CE88 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pagination.swift; path = Model/Pagination.swift; sourceTree = "<group>"; };
+		72043E6D1E6D4BD500F5CE88 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewCell.swift; path = Views/ChatTableViewCell.swift; sourceTree = "<group>"; };
 		72141F7E1E69EBB300E60CBE /* OraChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72141F811E69EBB300E60CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72141F861E69EBB300E60CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +87,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		72043E6C1E6D4BB700F5CE88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72043E6D1E6D4BD500F5CE88 /* ChatTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		72141F751E69EBB300E60CBE = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +120,7 @@
 				724643DC1E6A8455005CB2C0 /* API */,
 				724643DB1E6A8429005CB2C0 /* Model */,
 				724643DA1E6A841C005CB2C0 /* ViewControllers */,
+				72043E6C1E6D4BB700F5CE88 /* Views */,
 				728C09D91E6CEA71008E5D3C /* Utils */,
 				72141F851E69EBB300E60CBE /* Main.storyboard */,
 				72141F881E69EBB300E60CBE /* Assets.xcassets */,
@@ -125,6 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				728C09D61E6B18AF008E5D3C /* User.swift */,
+				72043E661E6D466800F5CE88 /* Chat.swift */,
+				72043E641E6D424700F5CE88 /* ChatMessage.swift */,
+				72043E681E6D481300F5CE88 /* ChatList.swift */,
+				72043E6A1E6D486E00F5CE88 /* Pagination.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,6 +160,7 @@
 				7275092D1E6A9BBA0071C35A /* APIManager.swift */,
 				728C09D41E6B10E7008E5D3C /* AuthManager.swift */,
 				728C09DC1E6D19FC008E5D3C /* UsersManager.swift */,
+				72043E621E6D3F9200F5CE88 /* ChatsManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -273,11 +299,17 @@
 			files = (
 				7275092C1E6A91F10071C35A /* RegisterTableViewController.swift in Sources */,
 				728C09D51E6B10E7008E5D3C /* AuthManager.swift in Sources */,
+				72043E651E6D424700F5CE88 /* ChatMessage.swift in Sources */,
 				727509281E6A8CFF0071C35A /* LoginTableViewController.swift in Sources */,
+				72043E631E6D3F9200F5CE88 /* ChatsManager.swift in Sources */,
+				72043E6B1E6D486E00F5CE88 /* Pagination.swift in Sources */,
 				728C09E11E6D302C008E5D3C /* AccountTableViewController.swift in Sources */,
 				728C09DF1E6D20C7008E5D3C /* ChatsTableViewController.swift in Sources */,
 				728C09DB1E6CEA9E008E5D3C /* DefaultsManager.swift in Sources */,
 				7275092E1E6A9BBA0071C35A /* APIManager.swift in Sources */,
+				72043E671E6D466900F5CE88 /* Chat.swift in Sources */,
+				72043E691E6D481300F5CE88 /* ChatList.swift in Sources */,
+				72043E6E1E6D4BD500F5CE88 /* ChatTableViewCell.swift in Sources */,
 				7275092A1E6A8DA20071C35A /* BaseTableViewController.swift in Sources */,
 				728C09DD1E6D19FC008E5D3C /* UsersManager.swift in Sources */,
 				72141F821E69EBB300E60CBE /* AppDelegate.swift in Sources */,
@@ -407,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CGA9K6XXR;
 				INFOPLIST_FILE = OraChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orainteractive.OraChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CGA9K6XXR;
 				INFOPLIST_FILE = OraChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orainteractive.OraChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";

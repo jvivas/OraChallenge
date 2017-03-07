@@ -19,14 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initialViewController : UIViewController?
-        UIBarButtonItem.appearance().tintColor = UIColor.orange
-        UITabBar.appearance().tintColor = UIColor.orange
+        
         if DefaultsManager.getAuthToken() == nil {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerLoginId")
         } else {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "tabBarControllerChatsId")
         }
 
+        UIBarButtonItem.appearance().tintColor = UIColor.orange
+        UITabBar.appearance().tintColor = UIColor.orange
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UINavigationBar.appearance().isTranslucent = false
+        
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         

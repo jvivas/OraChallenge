@@ -95,7 +95,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uE-Jd-iqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="815.44227886056979"/>
+            <point key="canvasLocation" x="2239" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bIG-zh-CLd">
@@ -113,7 +113,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwR-uh-mtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="815.44227886056979"/>
+            <point key="canvasLocation" x="1341" y="814"/>
         </scene>
         <!--OraChat-->
         <scene sceneID="G3u-TW-Zst">
@@ -251,24 +251,52 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcM-Q1-VMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754.375" y="814.43661971830988"/>
+            <point key="canvasLocation" x="3068" y="814"/>
         </scene>
-        <!--Chats Table View Controller-->
+        <!--OraChat-->
         <scene sceneID="9GH-hI-Vt3">
             <objects>
                 <tableViewController storyboardIdentifier="chatsTableViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0n1-kp-Npf" customClass="ChatsTableViewController" customModule="OraChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wxf-Ii-RX5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wxf-Ii-RX5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sFW-uV-g8x">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCellIdentifier" rowHeight="82" id="sFW-uV-g8x" customClass="ChatTableViewCell" customModule="OraChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sFW-uV-g8x" id="bAj-tk-NIS">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A chat by Andre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMA-t5-tkp">
+                                            <rect key="frame" x="28" y="12" width="284" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dan - 23 mins ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-Ia-qe5">
+                                            <rect key="frame" x="28" y="33" width="284" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="1" green="0.64705882349999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oh hey!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uE-zA-eZP">
+                                            <rect key="frame" x="28" y="53" width="284" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelChatName" destination="MMA-t5-tkp" id="RjU-BO-JP0"/>
+                                    <outlet property="labelChatTime" destination="b3D-Ia-qe5" id="gZe-Af-PFO"/>
+                                    <outlet property="labelMessage" destination="3uE-zA-eZP" id="mY5-D1-QgM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -276,11 +304,11 @@
                             <outlet property="delegate" destination="0n1-kp-Npf" id="GLu-A6-q9a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qE8-Kc-aFf"/>
+                    <navigationItem key="navigationItem" title="OraChat" id="qE8-Kc-aFf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjC-bi-3Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5595" y="511.26760563380282"/>
+            <point key="canvasLocation" x="5694" y="511"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Wu-aB-bor">
@@ -300,7 +328,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nx-eA-Ikv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624" y="815"/>
+            <point key="canvasLocation" x="4020" y="815"/>
         </scene>
         <!--Account-->
         <scene sceneID="pQC-MH-i7p">
@@ -383,7 +411,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k5-DG-My3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5595" y="1180.9859154929577"/>
+            <point key="canvasLocation" x="5693" y="1181"/>
         </scene>
         <!--Account-->
         <scene sceneID="TBI-kU-aqo">
@@ -402,7 +430,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9v-4m-36c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4598" y="1182"/>
+            <point key="canvasLocation" x="4864" y="1181"/>
         </scene>
         <!--Chats-->
         <scene sceneID="mHq-xT-eag">
@@ -421,7 +449,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyp-Tg-jDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4597.5" y="511.26760563380282"/>
+            <point key="canvasLocation" x="4864" y="510"/>
         </scene>
     </scenes>
     <resources>

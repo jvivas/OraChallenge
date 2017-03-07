@@ -10,15 +10,6 @@ import UIKit
 import SwiftMessages
 import EGGProgressHUD
 
-extension String {
-    func isValidEmail() -> Bool {
-        
-        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
-        return emailTest.evaluate(with: self)
-    }
-}
-
 class BaseTableViewController: UITableViewController {
 
     let progressHud = EGGProgressHUD()
@@ -99,5 +90,39 @@ extension UITableViewController {
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension Date {
+    func differenceBetweenDate() -> String {
+        let calendar = Calendar.current
+        let now = Date()
+        let components = calendar.dateComponents([Calendar.Component.month, Calendar.Component.day, Calendar.Component.hour], from: self, to: now)
+        
+        let hours = components.hour!
+        let days = components.day!
+        let months = components.month!
+        var difference = ""
+        if months > 0 { difference += "\(addPluralWord(value: months, text: "month")) " }
+        if days > 0 { difference += "\(addPluralWord(value: days, text: "day")) " }
+        if hours > 0 { difference += "\(addPluralWord(value: hours, text: "hour")) " }
+        if months == 0 && days == 0 && hours == 0 { difference = "now" }
+        else { difference += " ago" }
+        return difference
+    }
+    
+    func addPluralWord(value:Int, text:String) -> String {
+        if value == 1 {
+            return "\(value) \(text)"
+        }
+        return "\(value) \(text)s"
+    }
+}
+
+extension String {
+    func isValidEmail() -> Bool {
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return emailTest.evaluate(with: self)
     }
 }
