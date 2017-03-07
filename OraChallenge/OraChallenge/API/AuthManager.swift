@@ -23,6 +23,7 @@ class AuthManager: APIManager {
         let parameters: Parameters = [ "email": email, "password": password]
         request(path: pathLogin, method: .post, parameters: parameters, onSuccess: { (response: SwiftyJSON.JSON) in
             let user = User(json: response["data"])
+            DefaultsManager.saveUserId(userId: (user?.id)!)
             self.delegate?.onLoginResponse!(user: user, errorMessage: nil)
         }, onFailed: { (response: String, statusCode:Int) in
             self.delegate?.onLoginResponse!(user: nil, errorMessage: response)

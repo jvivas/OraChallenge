@@ -37,6 +37,7 @@ class LoginTableViewController: BaseTableViewController {
     
     @IBAction func onTapLogin(_ sender: Any) {
         if isValidData() {
+            dismissKeyboard()
             startLoader(message: "Loading...")
             authManager!.requestLogin(email: textFieldEmail.text!, password: textFieldPassword.text!)
         }
@@ -61,7 +62,8 @@ extension LoginTableViewController : AuthDelegate {
         if errorMessage != nil {
             showErrorMessage(message: errorMessage!)
         } else {
-            print("Success login")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.showHomeScreen()
         }
     }
 }

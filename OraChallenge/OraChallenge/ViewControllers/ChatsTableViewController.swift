@@ -16,31 +16,11 @@ class ChatsTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addFloatingButton()
+        self.edgesForExtendedLayout = []
         chatsManager = ChatsManager.init()
         chatsManager?.delegate = self
         getChats(page: 1, limit: 50)
-        // Do any additional setup after loading the view.
-        let buttonWidth = CGFloat(44.0)
-        let actionButton = DTZFloatingActionButton(frame:CGRect(x: 100,
-                                                                y: 100,
-                                                                width: buttonWidth,
-                                                                height: buttonWidth
-        ))
-        actionButton.buttonColor = UIColor.orange
-        actionButton.handler = {
-            button in
-            print("Hi!")
-        }
-        actionButton.isScrollView = true
-        self.view.addSubview(actionButton)
-        
-        self.edgesForExtendedLayout = []
-//        let actionButton = DTZFABManager.shared.button
-//        DTZFABManager.shared.button().handler = {
-//            button in
-//            print("Tapped")
-//        }
-//        DTZFABManager.shared.show()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +33,22 @@ class ChatsTableViewController: BaseTableViewController {
         chatsManager?.requestGetChats(page: page, limit: limit)
     }
     
+    func addFloatingButton() {
+        let buttonWidth = CGFloat(44.0)
+        let buttonAddChat = DTZFloatingActionButton(frame:CGRect(x: 100,
+                                                                y: 100,
+                                                                width: buttonWidth,
+                                                                height: buttonWidth
+        ))
+        buttonAddChat.buttonColor = UIColor.orange
+        buttonAddChat.handler = {
+            button in
+            self.performSegue(withIdentifier: "segueShowChatDetail", sender: self)
+        }
+        buttonAddChat.isScrollView = true
+        self.view.addSubview(buttonAddChat)
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,35 +56,33 @@ class ChatsTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if arrayAllChats != nil {
-//            return (self.arrayAllChats?.chats!.count)!
-            return 20
+            return (self.arrayAllChats?.chats!.count)!
         }
         return 0
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected \(indexPath.row)")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ChatTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "chatCellIdentifier") as! ChatTableViewCell!
         
-//        let chat:Chat = (self.arrayAllChats?.chats![indexPath.row])!
-//        cell.labelChatName.text = chat.name
-//        cell.labelChatTime.text = chat.getLastMessageAuthorWithTime()
-//        cell.labelMessage.text = chat.lastMessage?.message
-        
+        let chat:Chat = (self.arrayAllChats?.chats![indexPath.row])!
+        cell.labelChatName.text = chat.name
+        cell.labelChatTime.text = chat.getLastMessageAuthorWithTime()
+        cell.labelMessage.text = chat.lastMessage?.message
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueShowChatDetail", sender: self)
+    }
+    
+    //     MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueShowChatDetail" ,
+            let nextScene:ChatDetailViewController = segue.destination as? ChatDetailViewController ,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let selectedChat:Chat = (self.arrayAllChats?.chats![indexPath.row])!
+            nextScene.currentChatDetail = selectedChat
+        }
     }
 
 }

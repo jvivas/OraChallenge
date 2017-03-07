@@ -17,21 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController : UIViewController?
         
         if DefaultsManager.getAuthToken() == nil {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerLoginId")
+            showLoginScreen()
         } else {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "tabBarControllerChatsId")
+            showHomeScreen()
         }
-
+        
         UIBarButtonItem.appearance().tintColor = UIColor.orange
         UITabBar.appearance().tintColor = UIColor.orange
         UITabBar.appearance().backgroundColor = UIColor.white
         UINavigationBar.appearance().isTranslucent = false
         
-        self.window?.rootViewController = initialViewController
+        
         self.window?.makeKeyAndVisible()
         
         return true
@@ -57,6 +55,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func showLoginScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerLoginId")
+        self.window?.rootViewController = initialViewController
+    }
+    
+    func showHomeScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "tabBarControllerChatsId")
+        self.window?.rootViewController = initialViewController
     }
 
 

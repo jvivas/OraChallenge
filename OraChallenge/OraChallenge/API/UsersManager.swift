@@ -25,6 +25,7 @@ class UsersManager: APIManager {
         let parameters: Parameters = ["name" : name, "email": email, "password": password, "password_confirmation" : passwordConfirmation]
         request(path: pathUsers, method: .post, parameters: parameters, onSuccess: { (response: SwiftyJSON.JSON) in
             let user = User(json: response["data"])
+            DefaultsManager.saveUserId(userId: (user?.id)!)
             self.delegate?.onCreateUserResponse!(user: user, errorMessage: nil)
         }, onFailed: { (response: String, statusCode:Int) in
             self.delegate?.onCreateUserResponse!(user: nil, errorMessage: response)

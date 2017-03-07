@@ -26,4 +26,18 @@ class ChatMessage: NSObject {
         self.createdAt = json["created_at"].string
         self.user = User(json: json["user"])
     }
+    
+    func getAuthorWithTime() -> String {
+        return "\((user?.name!)!) \(getTimeDifference())"
+    }
+    
+    func getTimeDifference() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let date = dateFormatter.date(from:(createdAt!)) {
+            return " - " + date.differenceBetweenDate()
+        }
+        return ""
+    }
 }
+

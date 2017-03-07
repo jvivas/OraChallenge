@@ -51,6 +51,7 @@ class RegisterTableViewController: BaseTableViewController {
 
     @IBAction func onTapRegisterButton(_ sender: Any) {
         if isValidData() {
+            dismissKeyboard()
             startLoader(message: "Loading...")
             usersManager?.requestCreate(name: textFieldName.text!, email: textFieldEmail.text!, password: textFieldPassword.text!, passwordConfirmation: textFieldConfirmPassword.text!)
         }
@@ -87,8 +88,8 @@ extension RegisterTableViewController : UsersDelegate {
         if errorMessage != nil {
             showErrorMessage(message: errorMessage!)
         } else {
-            // TODO show next screen
-            print("Success created user")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.showHomeScreen()
         }
     }
 }
